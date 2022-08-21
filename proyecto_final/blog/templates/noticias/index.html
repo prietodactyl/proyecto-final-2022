@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block titulo %} Noticias {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_noticia' %}" role="button">Agregar noticia</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Noticias</h4>
+        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Título</th>
+                        <th>Foto</th>
+                        <th>Texto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>04/08/22</td>
+                        <td>Tenemos página nueva</td>
+                        <td>Foto.jpg</td>
+                        <th>El grupo 2 de la comisión 4 del Informatorio hizo esta página.</th>
+                        <th><a name="" id="" class="btn btn-info" href="#" role="button">Leer</a> | 
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar_noticia' %}" role="button">Editar</a> | 
+                            <a name="" id="" class="btn btn-info" href="#" role="button">Borrar</a></th>
+                    </tr>
+                </tbody>
+            </table>
+            
+    </div>
+
+</div>
+
+{% endblock %}
