@@ -45,6 +45,20 @@
                     </div>
                 </li>
             </ul>
+
+
+
+
+
+            {% if user.is_authenticated %}
+				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-sm">SALIR</button></a>
+			{% else %}
+				<a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-sm">Iniciar sesion</button></a>
+			{% endif %}
+
+
+
+        
         </div>
     </nav>
 
