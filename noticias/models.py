@@ -2,11 +2,13 @@ from django.db import models
 
 from django.utils import timezone
 
+from usuarios.models import Usuario
+
 
 # Create your models here.
 class Noticia(models.Model):
 
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    author = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     title = models.CharField(max_length=200)
 
@@ -30,5 +32,5 @@ class Noticia(models.Model):
 
     def __str__(self):
 
-        return self.title
+        return self.title + ' | ' + str(self.author)
 

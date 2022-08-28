@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "usuarios.Usuario"
+
+LOGIN_URL = '/iniciar-sesion'
+LOGIN_REDIRECT_URL = 'main'
 
 # Application definition
 
@@ -42,7 +46,8 @@ INSTALLED_APPS = [
     'descargas',
     'main',
     'nosotros',
-    'noticias'
+    'noticias', 
+    'usuarios',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +65,7 @@ ROOT_URLCONF = 'webpage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,20 +83,6 @@ WSGI_APPLICATION = 'webpage.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'proyecto-final-2022',
-        'USER':'sa',
-        'PASSWORD':'santi123',
-        'HOST':'DESKTOP-HAP4VG2\SQLEXPRESS',
-        'PORT': '',
-        'OPTIONS': {
-            'DRIVER':'ODBC Driver 17 for SQL Server',
-        }
-    }
-}
 
 
 
