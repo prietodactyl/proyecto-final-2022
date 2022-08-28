@@ -1,3 +1,5 @@
+from asyncio.windows_events import NULL
+from pickle import TRUE
 from django.db import models
 
 from django.utils import timezone
@@ -8,7 +10,7 @@ from usuarios.models import Usuario
 # Create your models here.
 class Noticia(models.Model):
 
-    author = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    author = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=TRUE)
 
     title = models.CharField(max_length=200)
 
@@ -32,5 +34,5 @@ class Noticia(models.Model):
 
     def __str__(self):
 
-        return self.title + ' | ' + str(self.author)
+        return self.title
 
