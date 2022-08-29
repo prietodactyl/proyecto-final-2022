@@ -36,3 +36,12 @@ class Noticia(models.Model):
 
         return self.title
 
+class Comentario(models.Model):
+
+    creator = models.ForeignKey(Usuario, on_delete= models.CASCADE)
+
+    noticia = models.ForeignKey(Noticia, related_name= "comentarios", on_delete= models.CASCADE)    
+
+    comment = models.TextField()
+
+    date_added = models.DateTimeField(auto_now_add=True)

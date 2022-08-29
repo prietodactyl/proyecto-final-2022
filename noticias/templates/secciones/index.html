@@ -7,9 +7,9 @@
 <div class="card">
     <div class="card-header">
         
-        {% if user.es_administrador %}
+        {% if user.es_administrador or user.is_superuser %}
             <a name="" id="" class="btn btn-success" href="{% url 'crear_noticia' %}" role="button">Agregar noticia</a>
-               
+
         {% endif %}
             
         
@@ -23,21 +23,24 @@
                         <th>Fecha</th>
                         <th>Título</th>
                         <th>Foto</th>
-                        <th>Texto</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
+                
+                {% for n in noticias %}
+                    
                 <tbody>
                     <tr>
-                        <td>04/08/22</td>
-                        <td>Tenemos página nueva</td>
-                        <td>Foto.jpg</td>
-                        <th>El grupo 2 de la comisión 4 del Informatorio hizo esta página.</th>
-                        <th><a name="" id="" class="btn btn-info" href="#" role="button">Leer</a> | 
+                        <td>{{n.created_date}}</td>
+                        <td>{{n.title}}</td>
+                        <td>foto.png</td>
+                        <th><a name="" id="" class="btn btn-info" href="{% url 'detalle' n.id %}" role="button">Leer</a> | 
                             <a name="" id="" class="btn btn-info" href="{% url 'editar_noticia' %}" role="button">Editar</a> | 
                             <a name="" id="" class="btn btn-info" href="#" role="button">Borrar</a></th>
                     </tr>
                 </tbody>
+
+                {% endfor %}
             </table>
             
     </div>
