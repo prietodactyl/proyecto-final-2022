@@ -1,4 +1,4 @@
-Proyecto de aplicación Web tipo Blog
+Proyecto de aplicación Web tipo Blog para el Informatorio 2022 - Grupo 2 - Comisión 4
 
 El objetivo de este proyecto es desarrollar una aplicación web que tenga funcionalidades tipo blog, para subir noticias, comentarlas, editarlas, etc., todo ello usando el framework Django, el cual se utilizó durante la cursada del Informatorio.
 
@@ -28,18 +28,18 @@ Para obtener una copia del proyecto debemos realizar los siguientes pasos:
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 
-Menciona las herramientas que utilizaste para crear tu proyecto
+Herramientas que utilizamos en el proyecto
 
     Django - El framework web usado
     Python - Lenguaje utilizado
     Visual Studio Code - Editor de texto
+
 
 Participantes del proyecto:
 * Agustín Prieto
 * Ana Mazal
 * Fernando Bergagno
 * Santiago Pagno
-* Grupo 2 - Comisión 4
 
 Links de interés:
 * Informatorio - https://empleo.chaco.gob.ar/informatorio#/
