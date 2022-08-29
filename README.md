@@ -27,7 +27,7 @@ Este trabajo tenía ciertos requisitos básicos a tener en cueneta, por ejemplo 
 * En caso que todo se haya realizado correctamente, estamos en condiciones de ejecutar el servidor con el comando: "python manage.py runserver"
 * Ahora desde nuestro navegador web entramos a la dirección: "127.0.0.1:8000" y tendremos acceso a nuestra página Web.
 
-__Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 
 ## Herramientas que utilizamos en el proyecto
