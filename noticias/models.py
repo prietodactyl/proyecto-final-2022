@@ -16,6 +16,8 @@ class Noticia(models.Model):
 
     text = models.TextField()
 
+    picture = models.ImageField(upload_to="fotos_noticias", null=True, blank=True)
+
     created_date = models.DateTimeField(
 
             default=timezone.now)
@@ -45,3 +47,4 @@ class Comentario(models.Model):
     comment = models.TextField()
 
     date_added = models.DateTimeField(auto_now_add=True)
+    

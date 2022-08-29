@@ -2,9 +2,14 @@
 
 
 {% block contenido %}
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 60rem;">
     <div class="card-body">
-      <h5 class="card-title">{{noticia.title}}</h5>
+      <h2 class="card-title">{{noticia.title}}</h2>
+      
+      {% if noticia.picture %}
+      <img src="{{noticia.picture.url}}" class="card-img-top" alt="..." style="max-width:1000px;">
+      {% endif %} 
+     
       <p class="card-text">{{noticia.text}}</p>
       <a href="{% url 'noticias' %}" class="btn btn-primary">Volver</a>
     </div>
@@ -12,14 +17,14 @@
 
 <br>
 
-  <h2>Comentarios</h2>
+  <h4>Comentarios</h4>
   <a href="{% url 'comentar' noticia.id %}"><button type="button" class="btn btn-primary">Añadir un comentario</button></a>
   <br>
   {% for c in noticia.comentarios.all %}
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 60rem;">
     <div class="card-body">
       <h6 class="card-subtitle mb-2 text-muted">{{c.date_added}}</h6>
-      <h5 class="card-title">{{c.creator}}</h5>
+      <h5 class="card-text">{{c.creator}}</h5>
       <p class="card-text">{{c.comment}}</p>
       
       {% if user.id == c.creator_id %}

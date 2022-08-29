@@ -61,11 +61,12 @@ class CrearComentario(LoginRequiredMixin, CreateView):
         return super(CrearComentario, self).form_valid(form) 
 
     def get_success_url(self, **kwargs):
-        return reverse('noticias')
+        return (f'../detalle/{self.kwargs["pk"]}')
 
 class BorrarComentario(LoginRequiredMixin, DeleteView):
     model = Comentario
     template_name = "secciones/borrar_comentario.html"
 
     def get_success_url(self, **kwargs):
-        return reverse('noticias')
+        return (f'../')
+        

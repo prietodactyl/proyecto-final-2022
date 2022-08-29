@@ -11,10 +11,11 @@ class TimeInput(forms.TimeInput):
 class CrearNoticiaForm(forms.ModelForm):
     class Meta:
         model = Noticia
-        fields = ["title", "text"]
+        fields = ["title", "text", "picture"]
         labels = {
             'title' : 'Título',
             'text' : 'Noticia',
+            'picture': 'Foto',
         }
 
         widgets = {

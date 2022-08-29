@@ -3,76 +3,94 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/favicon.ico' %}" >
     <title>{% block titulo %}  {% endblock %}</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #166faf;">
-        <a class="navbar-brand" href="{% url 'main' %}">
-          <img src="{% static 'img/instituto_barranqueras_logo2.png' %}" width="30" height="30" alt="">
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'main' %}">Inicio <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'descargas' %}">Descargas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-
-
-
-
-
-            {% if user.is_authenticated %}
-				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-sm">SALIR</button></a>
-			{% else %}
-				<a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-sm">Iniciar sesion</button></a>
-			{% endif %}
-
-
-
+    
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="{% url 'main' %}" class="w3-bar-item w3-button w3-padding-large w3-white">Inicio</a>
+        <a href="{% url 'nosotros' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nosotros</a>
+        <a href="{% url 'noticias' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Noticias</a>
+        <a href="{% url 'descargas' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Descargas</a>
+        <a href="{% url 'contacto' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacto</a>
+        <div class="w3-dropdown-hover w3-right w3-button w3-padding-large w3-hover-white">
+            <img src="{% static 'img/avatar2.png' %}" class="w3-circle" style="height:23px;width:23px" alt="Cuenta">   
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="right:0">
+              {% if user.is_authenticated %}
+              <a href="{% url 'logout' %}" class="w3-bar-item w3-button">Cerrar Sesión</a>
+              {% else %}
+              <a href="{% url 'registro' %}" class="w3-bar-item w3-button">Crear Cuenta</a>
+              <a href="{% url 'login' %}" class="w3-bar-item w3-button">Iniciar Sesión</a>
+              {% endif %}
+            </div>
+          </div>
         
-        </div>
-    </nav>
+      </div>
+    
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="{% url 'nosotros' %}" class="w3-bar-item w3-button w3-padding-large">Nosotros</a>
+        <a href="{% url 'noticias' %}" class="w3-bar-item w3-button w3-padding-large">Noticias</a>
+        <a href="{% url 'descargas' %}" class="w3-bar-item w3-button w3-padding-large">Descargas</a>
+        <a href="{% url 'contacto' %}" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
+      </div>
+    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
+    <!-- Header -->
+    <header class="w3-container w3-green w3-center" style="padding:60px 10px">
+        <div class="logo">
+            <img src="{% static 'img/instituto_barranqueras_logo3.png' %}" height="200px" alt="">
+            <h1 class="w3-margin w3-jumbo">U.E.G.P.Nº 161 - INSTITUTO BARRANQUERAS</h1>
+        </div>
+    </header>
+     
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
                 {% block contenido %}  {% endblock %}
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+      <div class="w3-xlarge w3-padding-32">
+        <a href="https://www.facebook.com/institutobarranqueras"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/institutobarranqueras/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+     </div>
+    </footer>
+    
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
