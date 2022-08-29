@@ -31,7 +31,10 @@ _Tener en cuenta que se encuentra ignorado el archivo "local.py" por lo cual deb
 El archivo local.py debe tener el siguiente formato:
 ```
 from .base import *
-import os
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(BASE_DIR), "static"),
+)
 
 DEBUG = True
 
