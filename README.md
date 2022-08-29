@@ -35,6 +35,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
     Django - El framework web usado
     Python - Lenguaje utilizado
     Visual Studio Code - Editor de texto
+    HTML, CSS, Bootstrap
 
 
 ## Participantes del proyecto:
