@@ -39,6 +39,3 @@ Participantes del proyecto:
 * Ana Mazal
 * Fernando Bergagno
 * Santiago Pagno
-
-
-⌨️ con ❤️ por Villanuevand 😊
