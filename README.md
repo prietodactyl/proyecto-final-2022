@@ -16,11 +16,11 @@ Este trabajo tenía ciertos requisitos básicos a tener en cueneta, por ejemplo 
 * Creamos una carpeta donde vamos a colocar el repositorio
 * Abrimos Visual Studio Code o el software de edición que utilicemos.
 * Abrimos la carpeta contenedora
-* Iniciamos una nueva terminal dentro de esa carpeta
+* Con VS code iniciamos una nueva terminal dentro de esa carpeta
 * Copiamos la dirección del repositorio de la página github.com
 * Utilizamos el siguiente comando: git clone "dirección que copiamos previamente sin comillas"
 * Nos movemos a la carpeta que se creó
-* Ahora es recomendable crear un entorno virtual. Para ello, desde la terminal que abrimos, usamos el comando: "python -m venv env" - sin comillas.(crea la el entorno virtual env)
+* Ahora es recomendable crear un entorno virtual. Para ello, desde la terminal que abrimos, usamos el comando: "python -m venv env" - sin comillas.(crea el entorno virtual env)
 * Activamos el entorno virtual
 * Instalamos las dependencias necesarias con el comando: "pip install -r requeriments.txt
 * Ahora es necesario realizar una migración, para ello se utiliza el comando: "python manage.py migrate"
