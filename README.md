@@ -1,6 +1,6 @@
 Proyecto de aplicación Web tipo Blog
 
-El objetivo de este proyecto es desarrollar una aplicación web que tenga funcionalidades tipo blog, para subir noticias, comentarlas, editarlas, etc., todo ello usando el lenguaje Python en conjunto con el framework Django.
+El objetivo de este proyecto es desarrollar una aplicación web que tenga funcionalidades tipo blog, para subir noticias, comentarlas, editarlas, etc., todo ello usando el framework Django, el cual se utilizó durante la cursada del Informatorio.
 
 La organización para la cual realizamos el proyecto es una Institución educativa "U.E.G.P. Nº 161 "Instituto Barranqueras" que implementa la formación Técnica en Economía Social y Desarrollo Local en la Provincia del Chaco.
 
