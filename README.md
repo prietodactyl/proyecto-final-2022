@@ -39,3 +39,8 @@ Participantes del proyecto:
 * Ana Mazal
 * Fernando Bergagno
 * Santiago Pagno
+
+Links de interés:
+Informatorio - https://empleo.chaco.gob.ar/informatorio#/
+Instituto Barranqueras - https://www.facebook.com/institutobarranqueras
+
