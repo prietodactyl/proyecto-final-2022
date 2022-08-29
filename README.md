@@ -1,4 +1,6 @@
-Proyecto de aplicación Web tipo Blog para el Informatorio 2022 - Grupo 2 - Comisión 4
+Proyecto de aplicación Web tipo Blog
+
+Informatorio 2022 - Grupo 2 - Comisión 4
 
 El objetivo de este proyecto es desarrollar una aplicación web que tenga funcionalidades tipo blog, para subir noticias, comentarlas, editarlas, etc., todo ello usando el framework Django, el cual se utilizó durante la cursada del Informatorio.
 
