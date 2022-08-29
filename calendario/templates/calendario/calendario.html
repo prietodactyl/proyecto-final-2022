@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Calendario {% endblock %}
+
+{% block contenido %}
+
+<center>
+
+    <h1>Hola {{ name }} este es tu calendario personal. Tus eventos para {{ month }} {{ year }} son los siguientes </h1>
+    <br/>
+    Son las {{ time }} horas
+    {{ cal|safe }}
+    <br/><br/><br/><br/>
+    
+    Copyright(c) {{ current_year }}
+    
+</center>
+
+{% endblock %}

@@ -29,4 +29,5 @@ urlpatterns = [
     path('iniciar-sesion/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
     path("cerrar-sesion/",auth_views.logout_then_login, name="logout"),
     path("usuarios/", include("usuarios.urls")),
+    path("calendario/", include("calendario.urls")),
 ]

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Eventos {% endblock %}
+
+{% block contenido %}
+
+    <h1> Ubicacion </h1>
+    <br/>
+    
+{% for venue in venue_list %}
+
+<div class="card">
+    <div class="card-header">
+        {{ venue }} - {{ venue.web}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ event.event_date }}</h5>
+      <p class="card-text">
+        <ul>
+            <li>Lugar: {{ event.venue }}</li>
+            <li>Inscripción: {{ event.venue.web }}</li>
+            <li>Encargado: {{ event.manager }}</li>
+            <li>Descripción: {{ event.description }}</li>
+        </ul>
+      </p>
+      <a href="{% url 'eventos' %}" class="btn btn-primary">Ir a noticias</a>
+      
+    </div>
+</div>
+
+
+    
+
+
+{% endfor %}
+    
+
+
+{% endblock %}

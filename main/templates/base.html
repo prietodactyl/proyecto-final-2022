@@ -38,27 +38,21 @@
                     <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eventos</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="{% url 'eventos' %}">Lista de Eventos</a>
+                        <a class="dropdown-item" href="{% url 'add_event' %}">Agregar Evento</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Calendario</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'calendario' '2022' 'July' %}">Mes anterior</a>
+                        <a class="dropdown-item" href="{% url 'calendario' %}">Mes actual</a>
+                        <a class="dropdown-item" href="{% url 'calendario' '2022' 'September' %}">Mes siguiente</a>
                     </div>
                 </li>
             </ul>
-
-
-
-
-
-            {% if user.is_authenticated %}
-				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-sm">SALIR</button></a>
-			{% else %}
-				<a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-sm">Iniciar sesion</button></a>
-			{% endif %}
-
-
-
-        
         </div>
     </nav>
 
