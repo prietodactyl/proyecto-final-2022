@@ -41,6 +41,6 @@ Participantes del proyecto:
 * Santiago Pagno
 
 Links de interés:
-Informatorio - https://empleo.chaco.gob.ar/informatorio#/
-Instituto Barranqueras - https://www.facebook.com/institutobarranqueras
+* Informatorio - https://empleo.chaco.gob.ar/informatorio#/
+* Instituto Barranqueras - https://www.facebook.com/institutobarranqueras
 
