@@ -43,4 +43,5 @@ Participantes del proyecto:
 Links de interés:
 * Informatorio - https://empleo.chaco.gob.ar/informatorio#/
 * Instituto Barranqueras - https://www.facebook.com/institutobarranqueras
+* Video de la página en funcionamiento - https://www.youtube.com/watch?v=2LKWnX_UosM
 
