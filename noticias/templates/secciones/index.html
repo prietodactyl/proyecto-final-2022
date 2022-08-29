@@ -21,9 +21,9 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Fecha</th>
                         <th>Título</th>
                         <th>Foto</th>
+                        <th>Fecha</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -32,7 +32,7 @@
                     
                 <tbody>
                     <tr>
-                        <td>{{n.created_date}}</td>
+                        
                         <td>{{n.title}}</td>
                         
                         {% if n.picture %}
@@ -41,7 +41,7 @@
                         <td> </td>
                         {% endif %}
                             
-                        
+                        <td>{{n.created_date}}</td>
                         <th><a name="" id="" class="btn btn-info" href="{% url 'detalle' n.id %}" role="button">Leer</a>
                             
                             {% if user.is_superuser or user.es_administrador %}

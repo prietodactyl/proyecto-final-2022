@@ -6,7 +6,13 @@
 
 <div class="card">
     <div class="card-header">
-        Archivos
+        
+        {% if user.es_administrador or user.is_superuser %}
+            <a name="" id="" class="btn btn-success" href="{% url 'cargar_archivo' %}" role="button">Cargar Archivo</a>
+
+        {% endif %}
+            
+        
     </div>
     <div class="card-body">
         <h4 class="card-title">Archivos</h4>
@@ -14,20 +20,38 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Fecha</th>
-                        <th>Nombre</th>
+                        <th>Título</th>
                         <th>Descripción</th>
+                        <th>Fecha</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
+                
+                {% for a in archivos %}
+                    
                 <tbody>
                     <tr>
-                        <td>04/08/22</td>
-                        <td>quienes_somos.pdf</td>
-                        <th>Resumen de quiénes somos y cuál es nuestra misión.</th>
-                        <th><a name="" id="" class="btn btn-info" href="#" role="button">Descargar</a>
+                        
+                        <td>{{a.title}}</td>
+                        <td>{{a.description}}</td>
+                            
+                        <td>{{a.created_date}}</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                            <a href="{{ a.archive.url }}" download><div class="d-grid gap-2 col-6 mx-auto">                 <button class="btn btn-success border border-success p-2 mb-2" type="button" style="margin-top: 1rem;"><i class="bi bi-download"></i> Descargar</button>             </div></a>
+                            {% if user.es_administrador or user.is_superuser %}
+                            <a href="{% url 'borrar_archivo' a.id %}"><div class="d-grid gap-2 col-6 mx-auto">                 <button class="btn btn-success border border-success p-2 mb-2" type="button" style="margin-top: 1rem;"><i class="bi bi-download"></i> Borrar</button>             </div></a>
+                        
+                            {% endif %}
+                            {% else %}
+                             
+                                
+                            {% endif %}
+                        </td>
                     </tr>
                 </tbody>
+
+                {% endfor %}
             </table>
             
     </div>
