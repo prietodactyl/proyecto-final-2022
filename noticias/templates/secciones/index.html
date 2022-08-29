@@ -34,9 +34,16 @@
                         <td>{{n.created_date}}</td>
                         <td>{{n.title}}</td>
                         <td>foto.png</td>
-                        <th><a name="" id="" class="btn btn-info" href="{% url 'detalle' n.id %}" role="button">Leer</a> | 
-                            <a name="" id="" class="btn btn-info" href="{% url 'editar_noticia' %}" role="button">Editar</a> | 
-                            <a name="" id="" class="btn btn-info" href="#" role="button">Borrar</a></th>
+                        <th><a name="" id="" class="btn btn-info" href="{% url 'detalle' n.id %}" role="button">Leer</a>
+                            
+                            {% if user.is_superuser or user.es_administrador %}
+                            
+                            | 
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar_noticia' n.id %}" role="button">Editar</a> | 
+                            <a name="" id="" class="btn btn-info" href="{% url 'borrar' n.id %}" role="button">Borrar noticia</a></th>
+                                
+                            {% endif %}
+
                     </tr>
                 </tbody>
 

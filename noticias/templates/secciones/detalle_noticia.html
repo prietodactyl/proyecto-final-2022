@@ -9,5 +9,28 @@
       <a href="{% url 'noticias' %}" class="btn btn-primary">Volver</a>
     </div>
   </div>
+
+<br>
+
+  <h2>Comentarios</h2>
+  <a href="{% url 'comentar' noticia.id %}"><button type="button" class="btn btn-primary">Añadir un comentario</button></a>
+  <br>
+  {% for c in noticia.comentarios.all %}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{c.date_added}}</h6>
+      <h5 class="card-title">{{c.creator}}</h5>
+      <p class="card-text">{{c.comment}}</p>
+      
+      {% if user.id == c.creator_id %}
+      <a href="{% url 'borrar-comentario' c.id %}"><button type="button" class="btn btn-dark">Borrar</button></a>
+      {% endif %}
+        
+      
+    </div>
+  </div>
+    
+  {% endfor %}
+    
 {% endblock contenido %}
     
