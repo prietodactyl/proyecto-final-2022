@@ -39,6 +39,7 @@ Participantes del proyecto:
 * Ana Mazal
 * Fernando Bergagno
 * Santiago Pagno
+* Grupo 2 - Comisión 4
 
 Links de interés:
 * Informatorio - https://empleo.chaco.gob.ar/informatorio#/
