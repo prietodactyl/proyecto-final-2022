@@ -27,7 +27,31 @@ Este trabajo tenía ciertos requisitos básicos a tener en cueneta, por ejemplo 
 * En caso que todo se haya realizado correctamente, estamos en condiciones de ejecutar el servidor con el comando: "python manage.py runserver"
 * Ahora desde nuestro navegador web entramos a la dirección: "127.0.0.1:8000" y tendremos acceso a nuestra página Web.
 
-_Tener en cuenta que se encuentra ignorado el archivo "local.py" el cual importa de base, os y contiene información de DEBUG; ALLOWED_HOSTS y DATABASES_
+_Tener en cuenta que se encuentra ignorado el archivo "local.py" por lo cual deberán crear un archivo con ese nombre como así también un "base.py" dentro de una carpeta settings (a nivel proyecto)._
+El archivo local.py debe tener el siguiente formato:
+```
+from .base import *
+import os
+
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'engine-name',
+        'NAME': 'db name',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'host name',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'driver correspondiente',
+        }       
+    }
+}
+```
+importa de base, os y contiene información de DEBUG; ALLOWED_HOSTS y DATABASES_
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
