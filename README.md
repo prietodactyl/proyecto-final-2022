@@ -51,8 +51,6 @@ DATABASES = {
     }
 }
 ```
-importa de base, os y contiene información de DEBUG; ALLOWED_HOSTS y DATABASES_
-
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 
