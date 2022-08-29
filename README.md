@@ -1,4 +1,4 @@
-Proyecto de aplicación Web tipo Blog
+# Proyecto de aplicación Web tipo Blog
 
 Informatorio 2022 - Grupo 2 - Comisión 4
 
@@ -37,7 +37,7 @@ Herramientas que utilizamos en el proyecto
     Visual Studio Code - Editor de texto
 
 
-Participantes del proyecto:
+## Participantes del proyecto:
 * Agustín Prieto
 * Ana Mazal
 * Fernando Bergagno
