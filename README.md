@@ -11,7 +11,7 @@ El trabajo se realizó de manera grupal, dividiendo funciones y utilizando githu
 Este trabajo tenía ciertos requisitos básicos a tener en cueneta, por ejemplo que hubiera dos tipos de perfil, admin y visitante. Cada uno de ellos con diferentes funciones y privilegios.
 
 
-Para obtener una copia del proyecto debemos realizar los siguientes pasos:
+## Para obtener una copia del proyecto debemos realizar los siguientes pasos:
 
 * Creamos una carpeta donde vamos a colocar el repositorio
 * Abrimos Visual Studio Code o el software de edición que utilicemos.
@@ -27,10 +27,10 @@ Para obtener una copia del proyecto debemos realizar los siguientes pasos:
 * En caso que todo se haya realizado correctamente, estamos en condiciones de ejecutar el servidor con el comando: "python manage.py runserver"
 * Ahora desde nuestro navegador web entramos a la dirección: "127.0.0.1:8000" y tendremos acceso a nuestra página Web.
 
-Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+__Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 
-Herramientas que utilizamos en el proyecto
+## Herramientas que utilizamos en el proyecto
 
     Django - El framework web usado
     Python - Lenguaje utilizado
@@ -43,7 +43,7 @@ Herramientas que utilizamos en el proyecto
 * Fernando Bergagno
 * Santiago Pagno
 
-Links de interés:
+## Links de interés:
 * Informatorio - https://empleo.chaco.gob.ar/informatorio#/
 * Instituto Barranqueras - https://www.facebook.com/institutobarranqueras
 * Video de la página en funcionamiento - https://www.youtube.com/watch?v=2LKWnX_UosM
